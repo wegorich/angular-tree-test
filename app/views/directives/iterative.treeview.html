@@ -1,0 +1,8 @@
+<ul class="list-group">
+    <div ng-repeat="data in ngTree | toArray track by $index">
+        <li ng-show="!data.__parent || data.__parent.show" class="list-group-item" ng-click="select(data)" style="padding-left: {{data.getPadding()}}px;" ng-class="{active: ngModel === data}">
+            <a class="btn btn-default btn-fixed-size btn-xs" ng-show="data.nodes.length" ng-click="data.toggle()">{{data.show ? '-' : '+'}}</a>
+            {{data.name}}
+        </li>
+    </div>
+</ul>

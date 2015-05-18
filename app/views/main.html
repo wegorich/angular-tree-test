@@ -1,0 +1,19 @@
+<div class="row">
+    <form class="form-inline">
+        <div class="form-group pull-right" ng-if="params.model">
+            <label for="model-name">Item name:</label>
+            <input id="model-name" ng-model="params.model.name"/>
+        </div>
+
+        <button class="btn btn-success btn-sm" ng-click="addParent(tree)">Add Parent</button>
+        <button ng-show="params.model" class="btn btn-green btn-sm" ng-click="params.model.addChild()">Add</button>
+        <button ng-show="params.model" class="btn btn-danger btn-sm" ng-click="removeItem(params.model)">Delete</button>
+    </form>
+    <br>
+</div>
+<div class="row" ng-if="isRecursive">
+    <div recursive-treeview ng-tree="tree" ng-model="params.model"></div>
+</div>
+<div class="row" ng-if="!isRecursive">
+    <div iterative-treeview ng-tree="tree" ng-model="params.model"></div>
+</div>

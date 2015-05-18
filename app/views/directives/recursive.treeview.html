@@ -1,0 +1,14 @@
+<script type="text/ng-template"  id="tree_item_renderer.html">
+    <li class="list-group-item" ng-click="select(data)" style="padding-left: {{data.getPadding()}}px;" ng-class="{active: ngModel === data}">
+        <a class="btn btn-default btn-fixed-size btn-xs" ng-show="data.nodes.length" ng-click="data.toggle()">{{data.show ? '-' : '+'}}</a>
+
+        {{data.name}}
+    </li>
+    <div ng-show="data.show">
+        <div ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></div>
+    </div>
+</script>
+
+<ul class="list-group">
+    <div ng-repeat="data in ngTree" ng-include="'tree_item_renderer.html'"></div>
+</ul>
