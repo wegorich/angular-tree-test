@@ -1,6 +1,6 @@
-## This task is simple solution of "rendering a tree of objects" in angular.
+### This task is simple solution of "rendering a tree of objects" in angular
 
-#How to run
+##How to run
 
 ```
 npm install -g grunt-cli bower yo generator-karma generator-angular
@@ -8,7 +8,7 @@ npm install
 bower install
 ```
 
-#In details:
+##In details:
 - 2 possible solutions: iterative and recursive.
 - It's done in Angular.
 - Covered with tests.
@@ -20,21 +20,21 @@ bower install
 - The data stored in local storage beforeunload.
 - The date read from local storage onload.
 
-#Example of the structure
-├── Element #1
-├── Element #2
-└── Element #3
-    ├── Child #1 of element #3
-    │   ├── Subchild
-    │   ├── Another subchild
-    │   ├── Another subchild
-    │   └── Last subchild
-    ├── Child #2 of element #3
-    │   ├── Subchild
-    │   ├── Subchild
-    │   ├── Subchild
-    │   └── Subchild
-    └── Child #3 of element #3
-        ├── Subchild
-        └── Subchild
+##Example of the structure generated
+- Element #1
+- Element #2
+- Element #3
+    - Child #1 of element #3
+        - Subchild
+        - Another subchild
+        - Another subchild
+        - Last subchild
+    - Child #2 of element #3
+        - Subchild
+        - Subchild
+        - Subchild
+        - Subchild
+    - Child #3 of element #3
+        - Subchild
+        - Subchild
 
