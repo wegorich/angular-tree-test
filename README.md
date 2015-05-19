@@ -6,6 +6,14 @@
 npm install -g grunt-cli bower yo generator-karma generator-angular
 npm install
 bower install
+
+grunt serve
+```
+
+##How to run test
+
+```
+grunt test
 ```
 
 ##In details:
