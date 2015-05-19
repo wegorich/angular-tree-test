@@ -41,7 +41,7 @@ angular.module('testApp').filter('toArray', function() {
                 ngModel: '='
             },
             controller: function($scope) {
-                $scope.select = function(data, parent) {
+                $scope.select = function(data) {
                     $scope.ngModel = data;
                 };
             },

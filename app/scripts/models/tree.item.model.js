@@ -24,6 +24,7 @@ angular.module('testApp').factory('TreeItem', function() {
     TreeItem.prototype.getPadding = function(){
       return (this.nodes.length ? 10 : 33)  + this.__depth * 40;
     };
+
     TreeItem.prototype.addChild = function(){
         this.nodes.push(new TreeItem({name: 'Child', __parent: this}));
     };

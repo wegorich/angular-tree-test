@@ -12,7 +12,7 @@ angular.module('testApp')
       $scope.params = {};
       $scope.tree = (localStorage.tree && JSON.parse(localStorage.tree) || []).toTree();
 
-        $window.addEventListener('beforeunload', function() {
+      $window.addEventListener('beforeunload', function() {
           localStorage.setItem("tree", $scope.tree.toNoCycleJSON());
       });
 
